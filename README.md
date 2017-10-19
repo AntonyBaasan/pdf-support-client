@@ -1,9 +1,8 @@
 # Introduction
 
-[![Angular Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://angular.io/styleguide)
-[![Build Status](https://travis-ci.org/mgechev/angular-seed.svg?branch=master)](https://travis-ci.org/mgechev/angular-seed)
-[![Dependency Status](https://david-dm.org/mgechev/angular-seed.svg)](https://david-dm.org/mgechev/angular-seed)
-[![devDependency Status](https://david-dm.org/mgechev/angular-seed/dev-status.svg)](https://david-dm.org/mgechev/angular-seed#info=devDependencies)
+[![Build Status](https://travis-ci.org/AntonyBaasan/pdf-support-client.svg?branch=master)](https://travis-ci.org/AntonyBaasan/pdf-support-client)
+[![dependencies Status](https://david-dm.org/AntonyBaasan/pdf-support-client/status.svg)](https://david-dm.org/AntonyBaasan/pdf-support-client)
+[![devDependencies Status](https://david-dm.org/AntonyBaasan/pdf-support-client/dev-status.svg)](https://david-dm.org/AntonyBaasan/pdf-support-client?type=dev)
 
 
 # How to start
