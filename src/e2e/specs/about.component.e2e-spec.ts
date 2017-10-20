@@ -6,7 +6,7 @@ describe('About', () => {
     return await browser.get('/about');
   });
 
-  it('should have correct feature heading', async () => {
+  xit('should have correct feature heading', async () => {
     const text = await element(by.css('sd-about h2')).getText();
     expect(text).toEqual('Features');
   });

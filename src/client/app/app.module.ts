@@ -11,7 +11,6 @@ import { SharedModule } from './shared/shared.module';
 
 import { FileUploadModule } from './fileupload/fileupload.module';
 
-
 @NgModule({
   imports: [BrowserModule, HttpModule, AppRoutingModule, AboutModule, HomeModule, SharedModule.forRoot()
     , FileUploadModule
