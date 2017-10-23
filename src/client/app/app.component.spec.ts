@@ -1,8 +1,7 @@
-import { Component, NgModule } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TestBed } from '@angular/core/testing';
 import { APP_BASE_HREF } from '@angular/common';
-import { HttpModule } from '@angular/http';
 
 import {
   async
@@ -19,25 +18,19 @@ import { AboutComponent } from './about/about.component';
 import { ToolbarComponent } from './shared/toolbar/toolbar.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 
-import { FileUploadComponent } from './fileupload/fileupload.component';
-
 export function main() {
 
   describe('App component', () => {
 
     let config: Route[] = [
-      { path: '', component: FileUploadComponent },
+      { path: '', component: HomeComponent },
       { path: 'about', component: AboutComponent }
-      { path: 'home', component: HomeComponent }
     ];
     beforeEach(() => {
       TestBed.configureTestingModule({
-        imports: [FormsModule, RouterTestingModule.withRoutes(config),
-          HttpModule
-        ],
+        imports: [FormsModule, RouterTestingModule.withRoutes(config)],
         declarations: [TestComponent, ToolbarComponent,
           NavbarComponent, AppComponent,
-          FileUploadComponent,
           HomeComponent, AboutComponent],
         providers: [
           { provide: APP_BASE_HREF, useValue: '/' }
