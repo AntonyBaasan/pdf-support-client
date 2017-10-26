@@ -1,11 +1,12 @@
 <div>
   <div *ngFor="let f of fileList">
-    {{ f.name }}
+    <button (click)="removeFile(f)">X</button>
+    {{ f.name }} 
   </div>
 </div>
 
 <div>
   <input type="file" #fileInput placeholder="Upload file..." accept=".pdf" (change)="chooseFile()" />
 
-  <button type="button" (click)="upload()">Upload</button>
+  <button type="button" (click)="upload()" [disabled]="!hasFileToUpload()">Upload</button>
 </div>

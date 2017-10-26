@@ -24,11 +24,18 @@ export class FileUploadComponent implements OnInit {
 
   }
 
+  public removeFile(file: any) {
+    this.fileList = this.fileList.filter((f) => file !== f);
+  }
+
   public chooseFile() {
     const fileBrowser = this.fileInput.nativeElement;
-    this.fileList.push(fileBrowser.files[0]);
+    if (fileBrowser.files && fileBrowser.files.length > 0)
+      this.fileList.push(fileBrowser.files[0]);
+  }
 
-    console.log(this.fileList.length);
+  public hasFileToUpload() {
+    return this.fileList.length > 0;
   }
 
   public upload() {
