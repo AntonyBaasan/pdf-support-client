@@ -11,6 +11,7 @@ import { Http } from '@angular/http';
 })
 export class FileUploadComponent implements OnInit {
   public fileList: File[] = [];
+  public downloadLink: string;
   private apiEndPoint: string = 'http://localhost:5000/api/PdfManager/UploadFiles';
 
   // tslint:disable-next-line:member-ordering
@@ -55,9 +56,13 @@ export class FileUploadComponent implements OnInit {
       // let args: RequestOptionsArgs = {};
       // args.headers['Content-Type'] ='multipart/form-data';
 
+      this.downloadLink = null;
       this.http.post(this.apiEndPoint, formData)
         .map(res => res.json())
-        .subscribe((data) => console.log(data));
+        .subscribe((data) => {
+          this.downloadLink = data.filePath;
+          console.log(data);
+        });
     }
   }
 
